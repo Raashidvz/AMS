@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload PDF</title>
+    <link rel="stylesheet" href="addStudents.css">
+</head>
+<body>
+    <div class="container">
+        <div style="width: 100%;">
+            <div class="back-button-container">
+                <button class="back-button" onclick="history.back()">Back</button>
+            </div>
+            <div>
+                <h2>Upload a New PDF</h2>
+            </div>
+        </div>
+        
+    
+        <form action="code..php" method="post" enctype="multipart/form-data">
+            <label>Select EXCEL file to upload:</label>
+            <label for="file-input" id="file-label" class="custom-file-upload">
+                Choose File
+            </label>
+            <input  type="file" id="file-input" name="fileUpload" required multiple/>
+            <input type="submit" name="upload-file" id="upload-file" value="Upload File">
+        </form>
+    </div>
+    <script>
+        document.getElementById('file-input').addEventListener('change', function() {
+            var fileLabel = document.getElementById('file-label');
+            var fileNames = Array.from(this.files).map(file => file.name).join(', ');
+            fileLabel.textContent = fileNames || 'Choose Files';
+        });
+    </script>
+</body>
+</html>
