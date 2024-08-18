@@ -11,13 +11,14 @@ body {
     background: #fff;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    height: 190px;
+    /* height: 190px; */
     margin-top: 190px;
 }
 
 h2 {
     text-align: center;
     margin-bottom: 20px;
+    width: 300px;
 }
 
 form {
@@ -76,4 +77,25 @@ input[type="file"] {
 /* Hover effect for the custom button */
 .custom-file-upload:hover {
     background-color: #0056b3;
+}
+.back-button {
+    background-color: #0d7aa7;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    display: inline-block;
+}
+
+.back-button:hover {
+    background-color: #0a6b91;
+}
+
+.back-button-container {
+    text-align: left;
+    margin-bottom: 20px;
+    width: 80px;
 }
