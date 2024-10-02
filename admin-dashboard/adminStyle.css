@@ -1,0 +1,275 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+header > a{
+    align-items: end;
+}
+/* nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none; 
+}*/
+/* .logout-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 14px;
+    margin-left: 20px; 
+    transition: background-color 0.3s ease;
+} */
+
+/* .logout-btn:hover {
+    background-color: #0056b3;
+} */
+
+.dashboard {
+    display: flex;
+    flex: 1;
+}
+
+/* .sidebar {
+    width: 200px;
+    background-color: #444;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 15px;
+}
+
+.sidebar ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+.sidebar a:hover {
+    background-color: #555;
+} */
+/* .sidebar {
+    width: 200px;
+    background-color: #444;
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: space-between; 
+    padding: 20px;
+    box-sizing: border-box; 
+}*/
+.sidebar {
+    width: 200px;
+    background-color: #65697b;
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: space-between;  /* This ensures the logout button is at the bottom */
+    padding: 20px;
+    box-sizing: border-box;
+    position: fixed; /* Keep the sidebar fixed */
+    top: 0; /* Align it to the top */
+    left: 0; /* Align it to the left */
+    overflow-y: auto; /* Allow scrolling within the sidebar if content overflows */
+}
+
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 15px;
+}
+
+.sidebar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+.sidebar a:hover {
+    /* font-size: 19px;
+    transition: font-size 0.4s; */
+    /* font-weight: bolder; */
+   
+    font-variant: small-caps;
+    transition: font-variant 0.5s;
+}
+
+.logout-btn {
+    background-color: #585e78;
+    color: white;
+    padding: 10px 0;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%; /* Full width of sidebar */
+    text-align: center;
+}
+
+.logout-btn:hover {
+    color: white;
+    background-color: rgb(251, 56, 56);
+}
+/* .content {
+    flex: 1;
+    padding: 20px;
+    box-sizing: border-box;
+} */
+.content {
+    flex: 1;
+    padding: 20px;
+    box-sizing: border-box;
+    margin-left: 220px; /* Adjust margin to the width of the sidebar */
+}
+
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f4f4f4;
+}
+button {
+    padding: 5px 10px;
+    margin-right: 5px;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+/* Add new buttton  */
+.new-btn{
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.new-btn:hover {
+    background-color: #0056b3;
+}
+.new-btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5);
+}
+.new-btn.disabled, 
+.new-btn:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+
+/*  button style */
+.update-btn,.delete-btn,.accessAllow-btn,.accessDeny-btn{
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.update-btn:hover {
+    background-color: #0056b3;
+}
+.update-btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5);
+}
+/* .update-btn.disabled, 
+.update-btn:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+} */
+
+.delete-btn{
+    background-color: red;
+}
+.delete-btn:hover {
+    background-color: rgb(201, 39, 39);
+}
+td.action-btn{
+    display: flex;
+    justify-content: space-around;
+}
+
+.accessAllow-btn{
+    background-color: red;
+}
+.accessAllow-btn:hover {
+    background-color: rgb(38, 227, 85);
+    
+}
+
+.accessDeny-btn{
+    background-color: rgb(38, 227, 85);
+}
+.accessDeny-btn:hover {
+    background-color: red;
+}
